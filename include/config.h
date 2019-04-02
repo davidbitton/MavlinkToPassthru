@@ -1,6 +1,8 @@
 #ifndef CONFIG_H_
 #define CONFIG_H_
 
+#include <Arduino.h>
+
 //************************************* Please select your options here before compiling **************************
 //#define PX4_Flight_stack   //  If your flight stack is PX4 and not APM, un-comment this line
 // Choose one (only) of these target boards
@@ -25,5 +27,9 @@ const uint16_t bat2_capacity = 0;
 //#define Aux_Port_Enabled    // For BlueTooth or other auxilliary serial passthrough
 //#define QLRS                // Un-comment this line only if you are using the QLRS telemetry system
 
+
+#define Debug Serial
+#define mavBaud 57600
+#define mavSerial Serial2
 
 #endif
