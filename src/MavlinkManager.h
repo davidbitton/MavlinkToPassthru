@@ -10,10 +10,13 @@
 class MavlinkManager {
 private:
   CircularBuffer<mavlink_message_t, 10> MavRingBuff;
+  mavlink_message_t msg;
 
 public:
   MavlinkManager();
   void QueueOneMavFrame();
+  void DecodeOneMavFrame();
+  void Aux_ReceiveAndForward();
 };
 
 #endif
